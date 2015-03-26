@@ -10,6 +10,9 @@ dependencies {
     //This JMeter plugin source code build depends on JMeter2.9 version.
     compile 'org.apache.jmeter:ApacheJMeter_core:2.9'  
     compile 'org.apache.jmeter:ApacheJMeter_components:2.9'
+	compile 'org.apache.commons:commons-compress:1.6'
+	compile 'log4j:log4j:1.2.16'
+    compile 'joda-time:joda-time:2.1'
 }
 
 sourceSets {
