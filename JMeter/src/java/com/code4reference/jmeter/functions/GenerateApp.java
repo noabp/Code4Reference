@@ -77,8 +77,8 @@ public class GenerateApp extends AbstractFunction {
 				append.closeArchiveEntry();
 			}
 
-            long mean = new DateTime(DateTimeZone.UTC).getMillis() / Long.valueOf(appListDelay);
-            double std = (Long.valueOf(numDevices) * Long.valueOf(numAppsPerDevice)) / (30 * Long.valueOf(numOriginalApps));
+            long mean = new DateTime(DateTimeZone.UTC).getMillis() / Long.valueOf(appListDelay.trim());
+            double std = (Long.valueOf(numDevices.trim()) * Long.valueOf(numAppsPerDevice.trim())) / (30 * Long.valueOf(numOriginalApps.trim()));
 
             double randComment = new Random().nextGaussian() * std + mean;
 			append.setComment(String.valueOf(randComment));
